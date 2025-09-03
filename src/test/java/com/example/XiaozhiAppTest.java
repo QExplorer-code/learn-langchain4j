@@ -1,5 +1,6 @@
 package com.example;
 
+import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
@@ -53,4 +54,16 @@ public class XiaozhiAppTest {
         System.out.println(answer);
     }
 
+    /**
+     * 通义千问大模型
+     */
+    @Autowired
+    private QwenChatModel qwenChatModel;
+    @Test
+    public void testDashScopeQwen() {
+        //向模型提问
+        String answer = qwenChatModel.chat("你好");
+        //输出结果
+        System.out.println(answer);
+    }
 }
