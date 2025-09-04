@@ -3,16 +3,15 @@ package com.example;
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import dev.langchain4j.community.model.dashscope.WanxImageModel;
 import dev.langchain4j.data.image.Image;
-import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.output.Response;
-import org.example.XiaozhiApp;
+import org.example.ChatApp;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(classes = XiaozhiApp.class)
+@SpringBootTest(classes = ChatApp.class)
 public class XiaozhiAppTest {
     /**
      * gpt-4o-mini语言模型接入测试

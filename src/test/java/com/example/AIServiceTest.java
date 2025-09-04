@@ -2,13 +2,13 @@ package com.example;
 
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import dev.langchain4j.service.AiServices;
-import org.example.XiaozhiApp;
+import org.example.ChatApp;
 import org.example.assistant.Assistant;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(classes = XiaozhiApp.class)
+@SpringBootTest(classes = ChatApp.class)
 public class AIServiceTest {
     @Autowired
     private QwenChatModel qwenChatModel;
