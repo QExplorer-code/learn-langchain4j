@@ -22,5 +22,8 @@ public interface SeparateChatAssistant {
      */
     @SystemMessage("你是我的好朋友，请用东北话回答问题。今天是{{current_date}}")
     String chat(@MemoryId int memoryId, @UserMessage String userMessage);
+
+    @SystemMessage(fromResource = "my-prompt-template.txt")
+    String chat2(@MemoryId int memoryId, @UserMessage String userMessage);
 }
 
