@@ -3,6 +3,7 @@ package com.example;
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.loader.FileSystemDocumentLoader;
 import dev.langchain4j.data.document.parser.TextDocumentParser;
+import dev.langchain4j.data.document.parser.apache.pdfbox.ApachePdfBoxDocumentParser;
 import org.example.ChatApp;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -63,5 +64,16 @@ public class RAGTest {
 //        List<Document> documents2 =
 //                FileSystemDocumentLoader.loadDocumentsRecursively("D:\\AppDocument\\knowledge",
 //                        new TextDocumentParser());
+    }
+
+    /**
+     * 解析PDF
+     */
+    @Test
+    public void testParsePDF() {
+        Document document = FileSystemDocumentLoader.loadDocument("D:\\\\AppDocument\\\\knowledge\\医院信息.pdf",
+                new ApachePdfBoxDocumentParser()
+        );
+        System.out.println(document);
     }
 }
