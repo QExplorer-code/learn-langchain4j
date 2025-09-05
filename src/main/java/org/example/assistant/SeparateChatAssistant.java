@@ -12,7 +12,8 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
         wiringMode = EXPLICIT,
         chatModel = "qwenChatModel",
         chatMemory = "chatMemory",
-        chatMemoryProvider = "chatMemoryProvider"
+        chatMemoryProvider = "chatMemoryProvider",
+        tools = "calculatorTools" //配置tools
 )
 public interface SeparateChatAssistant {
     /**
@@ -21,7 +22,7 @@ public interface SeparateChatAssistant {
      * @param userMessage 用户消息
      * @return
      */
-    @SystemMessage("你是我的好朋友，请用东北话回答问题。今天是{{current_date}}")
+    @SystemMessage("今天是{{current_date}}")
     String chat(@MemoryId int memoryId, @UserMessage String userMessage);
 
     @SystemMessage(fromResource = "my-prompt-template.txt")
