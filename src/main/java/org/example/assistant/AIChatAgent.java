@@ -11,7 +11,8 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
         wiringMode = EXPLICIT,
         chatModel = "qwenChatModel",
         chatMemoryProvider = "chatMemoryProviderChat",
-        tools = "appointmentTools" // 配置tools
+        tools = "appointmentTools", // 配置tools
+        contentRetriever = "contentRetrieverChat" // 配置向量存储
 )
 public interface AIChatAgent {
 
