@@ -10,7 +10,9 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
 @AiService(
         wiringMode = EXPLICIT,
         chatModel = "qwenChatModel",
-        chatMemoryProvider = "chatMemoryProviderChat")
+        chatMemoryProvider = "chatMemoryProviderChat",
+        tools = "appointmentTools" // 配置tools
+)
 public interface AIChatAgent {
 
     @SystemMessage(fromResource = "AI-chat-prompt-template.txt")
